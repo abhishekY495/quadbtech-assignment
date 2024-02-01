@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 
 import { API_URL } from "../utils/constants";
 import { ShowCard } from "../components/ShowCard";
@@ -18,7 +18,7 @@ export const HomePage = () => {
       dispatch({ type: "SHOWS_DATA", payload: data });
     } catch (error) {
       console.error(error);
-      dispatch({ type: "SHOWS_DATA", payload: data });
+      dispatch({ type: "SHOWS_DATA_ERROR", payload: error });
     }
   };
 
