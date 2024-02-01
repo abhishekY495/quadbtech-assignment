@@ -22,7 +22,9 @@ export const HomePage = () => {
     }
   };
 
-  useEffect(() => getShowsData, []);
+  useEffect(() => {
+    getShowsData();
+  }, []);
 
   return (
     <div className="w-[800px] m-auto px-8 grid grid-cols-3 justify-items-center gap-x-[100px] gap-y-[30px] max-[890px]:w-full max-[890px]:flex max-[890px]:gap-x-[50px] flex-wrap justify-center">
